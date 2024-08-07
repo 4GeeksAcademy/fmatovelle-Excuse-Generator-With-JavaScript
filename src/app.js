@@ -18,12 +18,10 @@ window.onload = function() {
     "while I was praying",
   ];
 
-  // Función para generar un número aleatorio
   function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
   }
 
-  // Generar excusa
   function generateExcuse() {
     let whoIndex = getRandomIndex(who);
     let actionIndex = getRandomIndex(action);
@@ -33,6 +31,5 @@ window.onload = function() {
     return `${who[whoIndex]} ${action[actionIndex]} ${what[whatIndex]} ${when[whenIndex]}`;
   }
 
-  // Asignar excusa generada al elemento HTML
   document.getElementById("excuse").innerHTML = generateExcuse();
 };
